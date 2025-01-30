@@ -43,14 +43,14 @@ function initTelInput() {
   if (telInputInstance) {
     telInputInstance.destroy();
   }
-  if (window.innerWidth <= 992) {
+  if (window.innerWidth <= 1400) {
     telInputInstance = window.intlTelInput(input, {
       initialCountry: "it",
       separateDialCode: true,
     });
   }
 
-  if (window.innerWidth > 992) {
+  if (window.innerWidth > 1400) {
     telInputInstance = window.intlTelInput(input, {
       initialCountry: "ie",
       separateDialCode: true,
