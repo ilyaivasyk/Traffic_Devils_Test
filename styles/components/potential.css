@@ -1,0 +1,173 @@
+.potential-section {
+  padding: 162px 0 50px;
+  background: linear-gradient(to bottom, #D81E05, #490900);
+}
+
+.quote {
+  display: flex;
+  padding-left: 40px;
+  margin-bottom: 27px;
+}
+
+.quote__image {
+  max-width: 464px;
+  max-height: 464px;
+  margin-right: -64px;
+  margin-top: -90px;
+  z-index: 10;
+}
+
+.quote__background {
+  background: url("../../images/background/city-bg.jpg") center no-repeat;
+  background-size: cover;
+  padding: 100px 27px 63px 92px;
+}
+
+.quote__text {
+  max-width: 560px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 23px;
+}
+
+.potential__title {
+  text-align: center;
+  font-size: 38px;
+  color: #fff;
+  font-weight: 700;
+  margin: 27px 0 40px;
+}
+
+.potential__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.potential__range {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 690px;
+}
+
+.range__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: #080808;
+}
+
+.range__slider {
+  width: 100%;
+  background: #DEE4EC;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.range__month,
+.range__money {
+  max-width: 610px;
+  margin-top: 36px;
+}
+
+.range__result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 52px auto 0;
+  max-width: 500px;
+  padding: 25px 0;
+  border-radius: 38px;
+  background: linear-gradient(to right, #D81E05, #490900);
+}
+
+.range__result-text {
+  white-space: normal;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+}
+
+.range__result-current,
+.range__result-value {
+  white-space: normal;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #fff;
+}
+
+
+.potential__text-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.potential__amount {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.potential__amount:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width:992px) {
+  .quote {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .quote__image {
+    width: 300px;
+    height: 300px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: -20px;
+  }
+
+  .quote__background {
+    padding: 46px 35px;
+  }
+
+  .quote__text {
+    text-align: center;
+  }
+
+  .potential__details {
+    flex-direction: column;
+    gap: 42px;
+  }
+
+  .potential__text-title, .potential__amount {
+    text-align: center;
+  }
+
+  .range__result-current,
+  .range__result-value {
+    font-size: 20px;
+  }
+  
+  .range__result-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 430px) {
+
+  .range__result-current,
+  .range__result-value {
+    font-size: 15px;
+  }
+}

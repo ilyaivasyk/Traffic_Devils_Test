@@ -1,0 +1,106 @@
+.service {
+  margin-bottom: 77px;
+}
+
+.service__title {
+  font-size: 38px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.service__content {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.registration, .consult {
+  border-right: 1px solid #ee1b25;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.registration, .consult, .deposit {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.service-image {
+  width: 95px;
+  height: 95px;
+  margin-bottom: 52px;
+  flex: 1 1;
+}
+
+.service-heading {
+  font-size: 31px;
+  margin-bottom: 34px;
+  flex: 1 1;
+}
+
+.service-description {
+  color: #242424;
+  line-height: 22px;
+  margin-bottom: 36px;
+  flex: 1 1;
+}
+
+.registration__description {
+  max-width: 348px;
+}
+
+.consult__description {
+  max-width: 320px;
+}
+
+.deposit__description {
+  max-width: 332px;
+}
+
+.service-link {
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  background: #d21d05;
+  color: #fff;
+  line-height: 22px;
+  box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 1170px) {
+  
+  .service__content {
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 45px;
+  }
+  
+  .service-image {
+    margin-bottom: 37px;
+  }
+
+  .registration, .consult {
+    padding: 0;
+    border: none;
+  }
+  
+  .registration, .consult, .deposit {
+    align-items: center;
+  }
+  
+  .service-heading {
+    text-align: center;
+  }
+  
+  .service-description {
+    text-align: center;
+  }
+  
+  .service-link {
+    width: 100%;
+  }
+}
