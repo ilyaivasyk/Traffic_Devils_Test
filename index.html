@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" sizes="32x32" href="images/icons/logo.svg">
+    <link rel="icon" sizes="32x32" href="images/icons/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="styles/reset.css" />
@@ -49,35 +49,46 @@
             <nav class="header__navigation" aria-label="Header navigation">
               <ul class="header__list">
                 <li class="header__item">
-                  <a href="#" class="header__link" aria-label="Informazioni">Informazioni</a>
+                  <a href="#" class="header__link" aria-label="Informazioni"
+                    >Informazioni</a
+                  >
                 </li>
                 <li class="header__item">
                   <a href="#" class="header__link" aria-label="CEO">CEO</a>
                 </li>
                 <li class="header__item">
-                  <a href="#" class="header__link" aria-label="Iniziare a guadagnare subito">Iniziare a guadagnare subito</a>
+                  <a
+                    href="#"
+                    class="header__link"
+                    aria-label="Iniziare a guadagnare subito"
+                    >Iniziare a guadagnare subito</a
+                  >
                 </li>
               </ul>
             </nav>
           </div>
-            <img class="menu__toggle" src="images/icons/menu.svg" alt="menu" />
-   
-          
-            <img class="menu__close" src="images/icons/close.svg" alt="close" />
+          <img class="menu__toggle" src="images/icons/menu.svg" alt="menu" />
 
-          
+          <img class="menu__close" src="images/icons/close.svg" alt="close" />
+
           <aside class="menu">
-
             <nav class="menu__navigation" aria-label="menu navigation">
               <ul class="menu__list">
                 <li class="menu__item">
-                  <a href="#" class="menu__link" aria-label="Informazioni">Informazioni</a>
+                  <a href="#" class="menu__link" aria-label="Informazioni"
+                    >Informazioni</a
+                  >
                 </li>
                 <li class="menu__item">
                   <a href="#" class="menu__link" aria-label="CEO">CEO</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__link" aria-label="Iniziare a guadagnare subito">Iniziare a guadagnare subito</a>
+                  <a
+                    href="#"
+                    class="menu__link"
+                    aria-label="Iniziare a guadagnare subito"
+                    >Iniziare a guadagnare subito</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -85,7 +96,6 @@
         </div>
       </div>
     </header>
-    
 
     <main>
       <section class="investment-section">
@@ -102,23 +112,39 @@
           </div>
           <div class="investment__form-wrap">
             <div class="investment__background">
-              <form class="investment__form">
+              <form class="investment__form" id="investmentForm">
                 <input
                   class="investment__input"
                   type="text"
-                  placeholder="il suo nome"
+                  id="name"
+                  placeholder="Il suo nome"
                 />
+                <small class="error-message error-name"></small>
+
                 <input
                   class="investment__input"
                   type="text"
-                  placeholder="il suo cog"
+                  id="surname"
+                  placeholder="Il suo cognome"
                 />
+                <small class="error-message error-surname"></small>
+
                 <input
                   class="investment__input"
                   type="email"
-                  placeholder="e-mail"
+                  id="email"
+                  placeholder="E-mail"
                 />
-                <input class="investment__input" type="tel" id="phone" />
+                <small class="error-message error-email"></small>
+
+                <input
+                  class="investment__input"
+                  type="tel"
+                  id="phone"
+                  placeholder="Telefono"
+                />
+                <small class="error-message error-phone"></small>
+
                 <button class="investment__submit-btn" type="submit">
                   REGISTRATI
                 </button>

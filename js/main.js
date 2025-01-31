@@ -33,6 +33,73 @@ checkScreenSize();
 
 window.addEventListener("resize", checkScreenSize);
 
+//validation
+$('#investmentForm').on('submit', function(e) {
+  e.preventDefault();
+  let isValid = true;
+
+  // Перевірка полів та виведення помилок
+  $('.investment__input').each(function() {
+    const input = $(this);
+    const value = input.val().trim();
+    const id = input.attr('id');
+    const errorMessage = {
+      'name': "Il nome può contenere solo lettere e spazi.",
+      'surname': "Il cognome può contenere solo lettere e spazi.",
+      'email': "E-mail non valida.",
+      'phone': "Il numero di telefono deve contenere tra 9 e 15 cifre e deve essere un numero valido."
+    };
+
+    let isValidField = true;
+
+    // Перевірка імені та прізвища (лише літери та пробіл)
+    if ((id === 'name' || id === 'surname') && !/^[A-Za-zÀ-ÿ\s-]+$/.test(value)) {
+      isValidField = false;
+      setError(input, "Il nome e cognome devono contenere solo lettere e spazi.");
+    }
+    // Перевірка email
+    else if (id === 'email' && !validateEmail(value)) {
+      isValidField = false;
+      setError(input, "E-mail non valida.");
+    }
+    else if (id === 'phone' && !validatePhone(value)) {
+      isValidField = false;
+      setError(input, "Il numero di telefono deve contenere tra 9 e 15 cifre.");
+    }
+    else if (value === "") {
+      isValidField = false;
+      setError(input, errorMessage[id]);
+    }
+
+    if (isValidField) {
+      input.removeClass('invalid');
+      $(`.error-${id}`).text('');
+    }
+
+    if (!isValidField) {
+      isValid = false;
+    }
+  });
+
+  if (isValid) {
+    this.submit();
+  }
+});
+
+function setError(input, message) {
+  input.addClass('invalid');
+  $(`.error-${input.attr('id')}`).text(message);
+}
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function validatePhone(phone) {
+  return /^\+?[0-9]{9,15}$/.test(phone);
+}
+
+
 // phone
 
 const input = document.querySelector("#phone");
@@ -61,7 +128,6 @@ function initTelInput() {
 initTelInput();
 
 window.addEventListener("resize", initTelInput);
-
 
 // slider-range
 
